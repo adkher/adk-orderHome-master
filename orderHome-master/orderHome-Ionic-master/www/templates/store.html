@@ -1,0 +1,42 @@
+<ion-view view-title="Store">
+    
+   <div class="tabs-striped tabs-color-royal">
+       
+    <ul class="tabs">
+        <li ng-class="{active:isSelected(1)}" class="tab-item">
+            <a ng-click="select(1)">Groceries</a></li>
+        <li ng-class="{active:isSelected(2)}" class="tab-item">
+            <a ng-click="select(2)">Foods</a></li>
+        <li ng-class="{active:isSelected(3)}" class="tab-item">
+            <a ng-click="select(3)">Others</a></li>
+        
+    </ul>
+       
+  </div>
+  <ion-content>
+      
+    <ion-list radio-group [(ngModel)]="storeid">
+        
+      <div class="item item-divider" ng-repeat="store in stores | filter:{storetype: filtText}" href="#/app/store/{{store._id}}" >
+          <ion-radio style="font=100%" ng-click="setSelectedStore(store)" value="{store._id}"><span>{{store.storename}}</span></ion-radio>
+      </div>
+        <div >
+            
+        <ion-add-button style="align:center, align:bottom" class="item-button-center button button-block ion-plus-circled" ng-click="showAddStoreForm()">
+          Add Store
+        </ion-add-button>
+    
+       
+    </div>
+        
+    </ion-list>
+      
+         
+  </ion-content>
+    
+   
+   
+  
+   
+    
+</ion-view>

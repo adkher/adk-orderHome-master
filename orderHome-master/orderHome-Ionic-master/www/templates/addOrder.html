@@ -1,0 +1,30 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Add new order</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeOrderForm()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form id="orderForm" name="orderForm" ng-submit="addOrder()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Store Name</span>
+          <span class="input-label" ng-model="selectedStore">{{selectedStore.storename}}</span>
+        </label>
+          <label class="item item-input">
+          <span class="input-label">Order Id Number</span>
+          <input type="text" ng-model="neworder.orderString">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Order Description</span>
+          <textarea type="text" ng-model="neworder.description"></textarea>
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Add</button>
+        </label>
+          
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

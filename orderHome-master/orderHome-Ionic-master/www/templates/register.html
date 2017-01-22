@@ -1,0 +1,77 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Register</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeRegister()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="doRegister()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">First Name</span>
+          <input type="text" ng-model="registration.firstname">
+        </label>
+         <label class="item item-input">
+          <span class="input-label">Last Name</span>
+          <input type="text" ng-model="registration.lastname">
+        </label>
+          <label for="email-reg">
+              <span class="input-label">Email</span>
+                <input type="text" id="email-reg" name="email" ng-model="registration.lastname" value="<ion:form:register:field:email />"/>
+          </label>
+          <ion-list radio-group [(ngModel)]="registration.userType">
+                <ion-item>
+                    <span class="input-label">
+                        <ion-label>Buyer</ion-label>
+                    <ion-radio class="ion-checkmarkvalue" value="buyer" checked></ion-radio>
+                    </span>
+                    
+                </ion-item>
+                <ion-item>
+                    <span class="input-label">
+                        <ion-label>Seller</ion-label>
+                        <ion-radio class="ion-checkmark" value="seller"></ion-radio>
+                    </span>
+                </ion-item>
+          </ion-list>
+          <label class="item item-input">
+          <span class="input-label">Address line1</span>
+          <input type="text" ng-model="registration.aaddress_line1">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Address line2</span>
+          <input type="text" ng-model="registration.aaddress_line2">
+        </label>
+          <label class="item item-input">
+          <span class="input-label">City</span>
+          <input type="text" ng-model="registration.address_city">
+        </label>
+          <label class="item item-input">
+          <span class="input-label">State</span>
+          <input type="text" ng-model="registration.address_state">
+        </label>
+          <label class="item item-input">
+          <span class="input-label">Zip Code</span>
+          <input type="text" ng-model="registration.address_zip">
+        </label>
+          </label>
+          <label class="item item-input">
+          <span class="input-label">Country</span>
+          <input type="text" ng-model="registration.address_country">
+        </label>
+         <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" ng-model="registration.username">
+        </label>
+       <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="registration.password">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Register</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

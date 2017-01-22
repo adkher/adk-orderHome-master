@@ -1,0 +1,42 @@
+<ion-view view-title="Order Details">
+    
+   <ion-nav-buttons side="secondary">
+      <div class="buttons">
+        <button class="button button-icon icon ion-more"
+          ng-click="openPopover($event)"></button>
+      </div>
+    </ion-nav-buttons>
+  <ion-content>
+      <div class="row header">
+        <div class="col">Fields</div>
+        <div class="col">Details</div>
+      </div>
+     <div class="row" ng-model="order">
+               <div class="col">Order ID number</div>
+               <div class="col">{{order.orderString}}</div>
+           </div>
+
+
+           <div class="row" ng-model="order">
+               <div class="col">Order Store</div>
+               <div class="col">{{order.fromStore.storename}}</div>
+           </div>
+
+
+           <div class="row" ng-model="order">
+               <div class="col">Order Status</div>
+               <div class="col">{{order.orderStatus}}</div>
+           </div>
+
+           <div class="row" ng-model="order">
+                  <div class="col">Order Date</div>
+                  <div class="col">{{order.createdAt | date:'MMM. dd, yyyy'}}</div>
+           </div>
+
+           <div class="row" ng-model="order">
+                  <div class="col">Order Description</div>
+                  <div class="col">{{order.description}}</div>
+      </div>
+
+  </ion-content>
+</ion-view>

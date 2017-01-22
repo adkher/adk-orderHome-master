@@ -1,0 +1,33 @@
+<ion-view view-title="Order">
+    
+   <ion-header-bar class="bar-stable">
+        <h1 class="title">Service Provider Details</h1>
+    </ion-header-bar>
+  <ion-content>
+      
+      
+        <div class="row header">
+          <div class="col">Order No</div>
+          <div class="col">Store</div>
+          <div class="col">Status</div>
+          
+        </div>
+        
+        <div class="row" ng-repeat="order in orders" ui-sref="app.orderdetails({ id: order._id })">
+            
+          <div class="col">{{$index}}</div>
+          <div class="col">{{order.fromStore.storename}}</div>
+          <div class="col">{{order.orderStatus}}</div>
+       
+        </div>
+       
+        <div>
+             
+        <ion-add-button style="align:center, align:bottom" class="item-button-center button button-block ion-plus-circled" ng-click="showAddOrderForm()">
+          Add Order
+        </ion-add-button>
+      </div>
+      
+         
+  </ion-content>
+</ion-view>
