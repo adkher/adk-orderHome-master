@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('orderHome.services', ['ngResource'])
-//.constant("baseURL", "https://192.168.0.189:3443/")
- .constant("baseURL", "https://192.168.2.33:3443/")
+ .constant("baseURL", "https://192.168.0.189:3443/")
+ //.constant("baseURL", "https://192.168.2.33:3443/")
 
 
 .factory('storeFactory', ['$resource', 'baseURL', function ($resource, baseURL) {
